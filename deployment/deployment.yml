@@ -2,24 +2,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mc-app
+  name: app
   labels:
-    app: mc-app
+    app: app
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: mc-app
+      app: app
   template:
     metadata:
       labels:
-        app: mc-app
+        app: app
     spec:
       containers:
-      - name: mc-app
-        image: devopshubg333/batch13:5
+      - name: app
+        image: gongatireddy/task12:1
         ports:
         - containerPort: 8080
 
   
+
 
